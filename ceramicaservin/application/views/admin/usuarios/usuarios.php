@@ -29,7 +29,7 @@
                                             <td><strong>Nombre</strong></td>
                                             <td><strong>E-mail</strong></td>
                                             <td class="hidden-xs hidden-sm"><strong>Contraseña</strong></td>
-                                            <td class="hidden-xs hidden-sm"><strong>Direccion</strong></td>
+                                            <td class="hidden-xs hidden-sm"><strong>Dirección</strong></td>
                                             <td class="hidden-xs hidden-sm hidden-md"><strong>Teléfono</strong></t>
                                             <td class="hidden-xs hidden-sm"><strong>Estado</strong></td>
                                             <td class="hidden-xs hidden-sm hidden-md"><strong>Código Postal<strong></td>

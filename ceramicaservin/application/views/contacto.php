@@ -31,43 +31,10 @@
 
         <div class="row">
             <div class="box">
-               <!-- <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Dejanos un
-                        <strong>Mensaje</strong>
-                    </h2>
-                    <?php echo form_open('Comentarios/addComentario'); ?>
-                    <hr>
-                    <p>Nuestro taller ofrece diferentes servicios relacionados con los materiales cerámicos. Si desea que le informemos acerca de nuestros trabajos o algo que usted tenga en la mente, nos tiene a su disposición.</p>
-                    <form role="form">
-                        <div class="row">
-                            <div class="form-group col-lg-4">
-                                <label>Nombre</label>
-                                <?php echo form_error('nombreCom','<div class = "error">','</div>');?>
-                                <input type="text" class="form-control" id="name" name="nombreCom" required="" value="<?= set_value('nombreCom'); ?>" placeholder="Nombre">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Email</label>
-                                <?php echo form_error('email','<div class = "error">','</div>');?>
-                                <input type="email" class="form-control" id="email" name="email" required="" value="<?= set_value('email'); ?>" placeholder="Email">
-                                <p class="help-block"></p>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-lg-12">
-                                <label>Mensaje</label>
-                                <?php echo form_error('mensaje','<div class = "error">','</div>');?>
-                                <textarea class="form-control" rows="10" cols="100" id="mensaje" name="mensaje" required="" value="<?= set_value('mensaje'); ?>" placeholder="Mensaje" maxlength="500" style="resize:none"></textarea>
-                            </div>
-                            <div id="success"></div>
-                            <!-- For success/fail messages -->
-                           <!-- <button type="submit" class="btn btn-primary" onclick="return confirm('Su mensaje sera enviado')">Enviar</button>
-                            <?php echo form_close(); ?>
-                        </div>
-                    </form>
-                </div> -->
                 <?php
                             if(!$this->session->userdata('nombre')){
                          ?>
+
                           <div class="contact-form">
                             <div class="row">
                                 <div class="col-md-6">
@@ -80,47 +47,60 @@
                                     <img src="<?php echo base_url();?>img/ini.jpg" alt="" />
                                 </div>
                             </div>
-                             <div class="clear">
-                             </div>
+                             <div class="clear"></div>
                           </div>
                          <?php
                             }else{
                          ?>
+                         <div class="col-lg-12">
+                            <hr>
+                            <h2 class="intro-text text-center">Dejanos un
+                            <strong>Mensaje</strong>
+                            </h2>
+                            <hr>
+                            <p>Nuestro taller ofrece diferentes servicios, si desea que le informemos acerca de nuestros trabajos o algo que usted tenga duda o en mente, nos tiene a su disposición.</p>
+                            <br>
                             <div class="contact-form">
                                <div class="left_form">
                                  <?php echo form_open('Comentarios/addComentario');?>
                                  <?php //echo $mensaje; ?>
-                                    <div>                           
-                                        <span><label>Nombre del usuario</label></span>
-                                        <span><input name="nombre" type="text" class="textbox" readonly value="<?php echo $this->session->userdata('nombre')?>"></span>
-                                        <?php echo form_error('nombre'); ?>
+                                    <div class="form-group col-lg-4">
+                                        <span><label>Nombre del Usuario</label></span>
+                                        <?php echo form_error('nombre','<div class = "error">','</div>');?>
+                                        <span><input type="text" class="form-control" id="name" name="nombre" required="" value="<?php echo $this->session->userdata('nombre')?>" placeholder="nombre"></span>
                                     </div>
-                                    <div>
-                                        <span><label>E-MAIL</label></span>
-                                        <span><input name="email" type="text" class="textbox" readonly value="<?php echo $this->session->userdata('email')?>"></span>
+                                    <div class="form-group col-lg-4">
+                                        <span><label>Email</label></span>
+                                        <?php echo form_error('email','<div class = "error">','</div>');?>
+                                        <span><input type="email" class="form-control" id="email" name="email" required="" value="<?php echo $this->session->userdata('email')?>"" placeholder="Email">
+                                        <p class="help-block"></p></span>
                                         <?php echo form_error('email'); ?>
                                     </div>
-                                    <div>                           
+                                    <div class="form-group col-lg-9">
                                         <span><label>Mensaje</label></span>
-                                        <span><textarea name="mensaje"> </textarea></span>
+                                        <?php echo form_error('mensaje','<div class = "error">','</div>');?>
+                                        <span><textarea class="form-control" rows="10" cols="100" id="mensaje" name="mensaje" required="" value="<?= set_value('mensaje'); ?>" placeholder="Mensaje" maxlength="500" style="resize:none"></textarea></span>
                                         <?php echo form_error('mensaje'); ?>
                                     </div>
-                                   <div>
-                                        <span><input type="submit" value="Submit" class="myButton"></span>
-                                  </div>
-                                   <input type="hidden" name="usuario" value="<?php echo $this->session->userdata('idUsuario')?>">
-                                </form>
+                                    </form>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <img src="<?php echo base_url();?>images/comentario.png" alt="" />
+
+                           <div class="form-group col-lg-12">
+                                <input type="hidden" name="usuario" value="<?php echo $this->session->userdata('idUsuario')?>">
+                                <button type="submit" class="btn btn-default" onclick="return confirm('Su mensaje sera enviado')">Enviar</button>
+                                <?php echo form_close(); ?>
                             </div>
                                 <div class="clear"></div>
                           </div>
                          <?php
                             }
                          ?>
+                    </div> 
             </div>
         </div>
 
     </div>
+</div>    
     <!-- /.container -->

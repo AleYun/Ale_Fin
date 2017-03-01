@@ -40,7 +40,7 @@
                                                 "<td>" . $p->codigo . "</td>" .
                                                 "<td>" ."$ ". $p->precio .".00"."</td>".
                                                 "<td>" . $p->stock ."</td>".
-                                                "<td>" . $p->nombrecategoria ."</td>";
+                                                "<td>" . $p->nombreCate ."</td>";
                                                 /*
                                                 "<td class='hidden-xs hidden-sm'>";
                                                 $statu = ($p->status == 0) ? "inactivo" : "activo"; 

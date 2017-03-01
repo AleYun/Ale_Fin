@@ -45,7 +45,7 @@ class Comentarios_model extends CI_Model{
 					'status'=>$privilegio
 				);
 
-			$this->db->where('idcomentarios', $id);
+			$this->db->where('idComentarios', $id);
 			return $this->db->update('comentarios', $data);
 		}
 	}

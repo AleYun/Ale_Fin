@@ -67,6 +67,11 @@ class Micontrolador extends CI_Controller
     	$this->load->view('plantilla', $data);
     }
 
+    public function tienda(){
+        $data['contenido'] = 'tienda';
+        $this->load->view('plantilla', $data);
+    }
+
     public function registro(){
         $data['contenido'] = 'registro';
         $this->load->view('plantilla', $data);

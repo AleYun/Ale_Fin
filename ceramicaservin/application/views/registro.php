@@ -19,46 +19,58 @@
 				
 			</div>
 			<div class="col-md-4 well inicio">
+			<?php echo form_open('Usuarios/addUsuario');?>
 
-				<form id="formulario" action="#" method="post" enctype="multipart/form-data" class="form"> 
+				<form id="formulario" action="#" method="post" enctype="multipart/form-data" class="form">
+					<div class="form-group">
+						<label>Imagen</label>
+						<input type= "file" class="btn btn-defaul form-control" name="avatar" class="form-control" required/>
+						<?php echo form_error('avatar'); ?>
+					</div> 
 					<div class="form-group">
 				    	<label> Nombre </label>
 				    	<input type="text" name="nombre" class="form-control" required>
+				    	<?php echo form_error('nombre'); ?>
 			    	</div>
 
 					<div class="form-group">
 						<label>Email</label>
 						<input type="email" name="email" class="form-control" required>
+						<?php echo form_error('email'); ?>
 					</div>
 					
 					<div class="form-group">
-						<label>Password</label>
+						<label>Contraseña</label>
 						<input type="password" name="password" class="form-control" required>
+						<?php echo form_error('password'); ?>
 					</div>
 
 					<div class="form-group">
 						<label for="">Dirección</label>
 						<input type="text" name="direccion" class="form-control" required>
+						<?php echo form_error('direccion'); ?>
+					</div>
+					<div class="form-group">
+						<label for="">Teléfono</label>
+						<input type="text" name="telefono" class="form-control" required>
+						<?php echo form_error('telefono'); ?>
 					</div>
 
 					<div class="form-group">
 						<label for="">Estado</label>
 						<input type="text" name = "estado" class="form-control" required>
+						<?php echo form_error('estado'); ?>
 					</div>
 
 					<div class="form-group">
 						<label for="">Codigo Postal</label>
-						<input type="number" name = "cp" class="form-control" required>
+						<input type="number" name = "cpostal" class="form-control" required>
+						<?php echo form_error('cpostal'); ?>
 					</div>
 
 					<div id="respuesta" class="form-group">
                             
                     </div>
-
-					<div class="form-group">
-						<label>Avatar</label>
-						<input type= "file" class="btn btn-defaul form-control" name="avatar" class="form-control" required/>
-					</div>
 
 					<input class="btn btn-success form-control" type="submit" value="Registrar">
 					<a href="<?php echo base_url();?>index.php/Micontrolador/logi" title="Iniciar Sesión">Iniciar Sesión</a>

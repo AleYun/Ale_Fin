@@ -43,6 +43,7 @@
 
                         ?>
                             <li><a href="<?php echo base_url();?>index.php/Admin">Panel Administrador</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/Usuarios/cerrarSesion">Log out</a></li>
                         <?php   
                             }
                         }
@@ -51,7 +52,9 @@
                          if($this->session->userdata('nombre')){
                             if ($this->session->userdata('privilegios') == 0) {
                         ?>
-                            <li><a href="<?php echo base_url();?>index.php/Micontrolador/carrito">Carrito</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/Micontrolador/tienda">Tienda</a></li>
+
+                            <li><a href="<?php echo base_url();?>index.php/Usuarios/cerrarSesion">Cerrar Sesión</a></li>
                          <?php
                             }
 
