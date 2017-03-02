@@ -23,11 +23,12 @@ class Detalleventas_model extends CI_Model{
         }
     }
 
-		public function addVenta($f, $m){
+		public function addVenta($f, $m, $fp){
 			$data = array(
 					'idVentas'=>0,
 					'fechaVenta'=>$f,
-					'montofinal'=>$m
+					'montofinal'=>$m,
+					'foliopago'=>$fp
 				);
 
 			return $this->db->insert('ventas',$data);
@@ -35,11 +36,12 @@ class Detalleventas_model extends CI_Model{
 		}
 
 
-		public function upVenta($id, $f, $m){
+		public function upVenta($id, $f, $m, $fp){
 			$data = array(
 					
 					'fechaVenta'=>$f,
-					'montofinal'=>$m
+					'montofinal'=>$m,
+					'foliopago'=>$fp
 				);
 
 			$this->db->where('idVentas', $id);

@@ -28,8 +28,9 @@ class Comentarios extends CI_controller{
 			$n = $this->input->post('nombre');
 			$e = $this->input->post('email');
 			$m = $this->input->post('mensaje');
+			$us = $this->input->post('usuario');
 
-			$this->Comentarios_model->addComentario($n, $e, $m);
+			$this->Comentarios_model->addComentario($n, $e, $m, $us);
 			redirect('Micontrolador/contacto');
 
 		}

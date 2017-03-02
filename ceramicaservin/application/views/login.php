@@ -18,8 +18,12 @@
 		          	<div class="col-md-4">
 		          	  <div class="contact-form">
 		          							     <!--<form method="post" action="contact-post.html" class="left_form">-->
+
+
 		          		
 						<?php echo form_open('Usuarios/inicioSes'); ?>
+
+                            
             				<div class="login-box-body">
                 				<div class="panel-body">
                    				  <img src="<?php echo base_url();?>img/loginf.png" alt="" />
@@ -28,15 +32,15 @@
 
                 			<div class="form-group has-feedback">
                     			<?php echo form_error('email'); ?>
+                                <p style="color:#FBF9F9"><?php echo $this->session->flashdata('mensaje2')?></p>
                     			<input type="text" class="form-control" required name="email" placeholder="E-mail">
-                    			<p style="color:black"><?php echo $this->session->flashdata('mensaje2')?></p>
                     			<span class="glyphicon glyphicon-user form-control-feedback"></span>
                 			</div>
                				 <div class="form-group has-feedback">
                    				<?php echo form_error('password'); ?>
+                                <p style="color:#FBF9F9"><?php echo $this->session->flashdata('mensaje')?></p>
                    				<input type="password" class="form-control" required name="password" placeholder="Password">
                     			<span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    			<p style="color:black"><?php echo $this->session->flashdata('mensaje')?></p>
 							</div>
                 	<div class="row">
 

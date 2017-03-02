@@ -11,7 +11,9 @@ class Admin extends CI_Controller {
 		$this->load->model('Ventas_model');
 		$this->load->model('Productos_model');
 		$this->load->model('Categoria_model');	
-		$this->load->model('Detalleventas_model');		
+		$this->load->model('Detalleventas_model');
+		$this->load->model('Direccion_model');
+		$this->load->model('Compras_model');		
 		//$this->load->model('Ventas_model');
 	}
 
@@ -51,13 +53,14 @@ class Admin extends CI_Controller {
         //$data['dir']=$this->Direccion_model->addDireccion($e, $ci, $co, $col, $ca, $num);
 		$this->load->view('admin/plantilla', $data);
 	}
-	public function actualizarusuario(){
-		$data['contenido'] = 'admin/productos/actualizarusuario';
+	public function actualizarusuarios(){
+		$data['contenido'] = 'admin/usuarios/actualizarusuarios';
 		$data['nombre'] = $this->session->userdata('usuario');
             $data['id'] = $this->session->userdata('id');
 
 		$this->load->view('admin/plantilla', $data);
 	}
+
 
 	public function ventas(){
 		$data['contenido'] = 'admin/ventas/ventas';
@@ -67,6 +70,14 @@ class Admin extends CI_Controller {
         $data['detalle']=$this->Detalleventas_model->getDetalleventas();
 		$this->load->view('admin/plantilla', $data);
 	}
+
+	//public function compras(){
+		//$data['contenido'] = 'admin/compras/compras';
+		//$data['nombre'] = $this->session->userdata('usuario');
+            //$data['id'] = $this->session->userdata('id');
+        //$data['com']=$this->Compras_model->getCompras();
+		//$this->load->view('admin/plantilla', $data);
+	//}
 
 	public function productos(){
 		$data['contenido'] = 'admin/productos/productos';
@@ -125,6 +136,23 @@ class Admin extends CI_Controller {
             $data['id'] = $this->session->userdata('id');
 		$this->load->view('admin/plantilla', $data);
 	}
+
+
+	public function direccion(){
+		$data['contenido'] = 'admin/direccion/direccion';
+		$data['nombre'] = $this->session->userdata('usuario');
+            $data['id'] = $this->session->userdata('id');
+        $data['direc']=$this->Direccion_model->getDirecciones();
+		$this->load->view('admin/plantilla', $data);
+	}
+	public function agregardireccion(){
+		$data['contenido'] = 'admin/direccion/agregardireccion';
+		$data['nombre'] = $this->session->userdata('usuario');
+            $data['id'] = $this->session->userdata('id');
+        $data['direc']=$this->Direccion_model->getDirecciones();
+		$this->load->view('admin/plantilla', $data);
+	}
+
 }
 
 

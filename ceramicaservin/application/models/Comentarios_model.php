@@ -20,13 +20,14 @@ class Comentarios_model extends CI_Model{
         }
     }
 
-		public function addComentario($n, $e, $m){
+		public function addComentario($n, $e, $m, $us){
 			//$data['mensaje'] = "Comentario enviado con exito!!!";
 			$data = array(
 					'idComentarios'=>0,
 					'nombreCom'=>$n,
 					'email'=>$e,
-					'mensaje'=>$m
+					'mensaje'=>$m,
+					'idUsuario'=>$us
 					
 				);
 

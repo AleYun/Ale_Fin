@@ -81,6 +81,7 @@
                                             <tr><td>Código de producto: </td><td><?php echo $d->codigo?></td></tr>
                                             <tr><td>Precio del producto: </td><td><?php echo $d->preciomenudeo?></td></tr>
                                             <tr><td>Total de venta: </td><td><?php echo $d->montoFinal?></td></tr>
+                                            <tr><td>Folio de pago: </td><td><?php echo $d->foliopago?></td></tr>
                                             </table>
 
                                             <!--

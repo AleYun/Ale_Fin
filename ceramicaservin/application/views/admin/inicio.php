@@ -23,7 +23,7 @@
                         <img src="<?php echo base_url();?>Estilosback/dist/img/clientes.png">
                       </div>
                      <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Administrar Usuarios</button>
+                        <li><a href="<?php echo base_url();?>index.php/Admin/usuarios"><button type="submit" class="btn btn-primary">Administrar Usuarios</button>
                      </div>
                     </div>
                       
@@ -34,7 +34,7 @@
                         <img src="<?php echo base_url();?>Estilosback/dist/img/ventas.png">
                       </div>
                       <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Administrar Ventas</button>
+                        <li><a href="<?php echo base_url();?>index.php/Admin/ventas"><button type="submit" class="btn btn-primary">Administrar Ventas</button>
                      </div>
                     </div>
                   
@@ -44,7 +44,7 @@
                         <img src="<?php echo base_url();?>Estilosback/dist/img/productos.png">
                       </div>
                       <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Administrar Productos</button>
+                        <li><a href="<?php echo base_url();?>index.php/Admin/productos"><button type="submit" class="btn btn-primary">Administrar Productos</button>
                      </div>
                     </div>
                     
@@ -54,7 +54,7 @@
                         <img src="<?php echo base_url();?>Estilosback/dist/img/categorias.png">
                       </div>
                       <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Administrar Categorias</button>
+                        <li><a href="<?php echo base_url();?>index.php/Admin/categoria"><button type="submit" class="btn btn-primary">Administrar Categorias</button>
                      </div>
                     </div>
                     <div class="col-lg-12">
@@ -70,19 +70,19 @@
                         <img src="<?php echo base_url();?>Estilosback/dist/img/comentarios.png" alt="User Image">
                       </div>
                       <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Administrar Comentarios</button>
+                        <li><a href="<?php echo base_url();?>index.php/Admin/comentarios"><button type="submit" class="btn btn-primary">Administrar Comentarios</button>
                      </div>
                     </div>
 
 
-                    <div class="col-md-3">
+                    <!--<div class="col-md-3">
                       <div class="pull-left image">
                         <img src="<?php echo base_url();?>Estilosback/dist/img/cerrarsesion.png" alt="User Image">
                       </div>
                       <div class="box-footer">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary" >Cerrar Sesión</button>
                      </div>
-                    </div>
+                    </div>-->
 
                   </div>
                   <br><br>
